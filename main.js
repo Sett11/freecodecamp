@@ -26,10 +26,27 @@ const contacts = [
     },
   ];
   
-  function lookUpProfile(name, prop) {
-    // Only change code below this line
-  
-    // Only change code above this line
+  function lookUpProfile(firstName, prop){
+  // Only change code below this line
+    var contact;
+    
+    for (var i=0; i<contacts.length; i++) {
+      if (contacts[i].firstName === firstName) {
+        contact = contacts[i];
+        break;
+      }
+    }
+    
+    if (contact) {
+      if (contact.hasOwnProperty(prop)) {
+        return contact[prop];
+      } else {
+        return "No such property";
+      }
+    } else {
+      return "No such contact";
+    }
+  // Only change code above this line
   }
   
   lookUpProfile("Akira", "likes");
