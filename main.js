@@ -1,11 +1,12 @@
-function testLogicalAnd(val) {
+function testLogicalOr(val) {
     // Only change code below this line
-      if (val<=50&&val>=25) {
-        return "Yes";
-      }
+  
+    if (val>=20||val<=10) {
+      return "Outside";
+    }
   
     // Only change code above this line
-    return "No";
+    return "Inside";
   }
   
-  testLogicalAnd(10);
+  console.log(testLogicalOr(9))
