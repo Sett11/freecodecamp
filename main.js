@@ -1,4 +1,5 @@
+// Setup
+const lastName = "Lovelace";
 
-let myStr = "Jello World";
-
-myStr = "Hello World";
+// Only change code below this line
+const thirdLetterOfLastName = lastName[2]; // Change this line
