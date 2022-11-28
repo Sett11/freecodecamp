@@ -1,4 +1,4 @@
-function reusableFunction(){
-    console.log("Hi World");
+function functionWithArgs(x, y){
+    console.log(x+y)
   }
-  reusableFunction()
+  functionWithArgs(1,2)
