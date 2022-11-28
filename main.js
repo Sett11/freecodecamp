@@ -1,6 +1,4 @@
 
-let firstLetterOfLastName = "";
-const lastName = "Lovelace";
+let myStr = "Jello World";
 
-
-firstLetterOfLastName = lastName[0];
+myStr = "Hello World";
