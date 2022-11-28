@@ -1,11 +1,16 @@
 // Setup
-const outerWear = "T-Shirt";
+let sum = 0;
 
-function myOutfit() {
-  // Only change code below this line
-let outerWear = 'sweater'
-  // Only change code above this line
-  return outerWear;
+function addThree() {
+  sum = sum + 3;
 }
+function addFive(){
+  sum+=5
+}
+// Only change code below this line
 
-myOutfit();
+
+// Only change code above this line
+
+addThree();
+addFive();
