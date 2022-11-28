@@ -1,17 +1,15 @@
-function testElse(val) {
-    let result = "";
-    // Only change code below this line
-  
-    if (val > 5) {
-      result = "Bigger than 5";
+function testElseIf(val) {
+    if (val > 10) {
+      return "Greater than 10";
     }
   
-    else {
-      result = "5 or Smaller";
+    else if(val < 5) {
+      return "Smaller than 5";
     }
-  
-    // Only change code above this line
-    return result;
+    else{
+       return "Between 5 and 10";
+    }
+   
   }
   
-  testElse(4);
+  testElseIf(7);
