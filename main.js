@@ -1,3 +1,5 @@
-const someAdjective = "fack";
-let myStr = "Learning to code is ";
-myStr += someAdjective
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+
+lastNameLength = lastName.length;
