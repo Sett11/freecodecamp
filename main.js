@@ -11,8 +11,8 @@ const myMusic = [
     },
     {
       "artist": "ABBA",
-      "title": "Ring Ring",
-      "release_year": 1973,
+      "title": "Vasia",
+      "release_year": 1989,
       "formats": [
         "CS",
         "8T",
