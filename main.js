@@ -1,12 +1,10 @@
-
-  function rangeOfNumbers(startNum, endNum) {
-    if(startNum===endNum){
-        return [startNum]
+function checkScope() {
+    'use strict'
+    let i = 'function scope';
+    if (true) {
+      let i = 'block scope';
+      console.log('Block scope i is: ', i);
     }
-    else{
-        const countArr = rangeOfNumbers(startNum, endNum-1)
-        countArr.push(endNum)
-        return countArr
-    }
+    console.log('Function scope i is: ', i);
+    return i;
   }
-  console.log(rangeOfNumbers(1,5))
