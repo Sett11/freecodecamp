@@ -1,8 +1,8 @@
-function factorialize(num) {
-  if(num<=1){
-    return 1
-  }
-  return num * factorialize(num-1)
+function findLongestWordLength(str) {
+  let len = str.split(' ')
+  let sor = len.sort((a,b)=> b.length-a.length)
+  let res = sor[0].split('')
+  return res.length
 }
 
-console.log(factorialize(5))
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
