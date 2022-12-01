@@ -1,27 +1,23 @@
-let users = {
+const users = {
   Alan: {
-    age: 27,
-    online: true
+    online: false
   },
   Jeff: {
-    age: 32,
     online: true
   },
   Sarah: {
-    age: 48,
-    online: true
-  },
-  Ryan: {
-    age: 19,
-    online: true
+    online: false
   }
-};
-
-function isEveryoneHere(userObj) {
- return userObj.hasOwnProperty('Alan')&&
- userObj.hasOwnProperty('Jeff')&&
- userObj.hasOwnProperty('Sarah')&&
- userObj.hasOwnProperty('Ryan')?true:false
 }
 
-console.log(isEveryoneHere(users));
+function countOnline(usersObj) {
+  let counter = 0
+  for(let user in usersObj){
+    if(usersObj[user].online){
+      counter += 1
+    }
+  }
+  return counter
+}
+
+console.log(countOnline(users));
