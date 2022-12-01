@@ -1,16 +1,27 @@
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
 };
-delete foods.oranges;
-delete foods.plums;
-delete foods.strawberries;
-// Only change code below this line
 
-// Only change code above this line
+function isEveryoneHere(userObj) {
+ return userObj.hasOwnProperty('Alan')&&
+ userObj.hasOwnProperty('Jeff')&&
+ userObj.hasOwnProperty('Sarah')&&
+ userObj.hasOwnProperty('Ryan')?true:false
+}
 
-console.log(foods);
+console.log(isEveryoneHere(users));
