@@ -1,14 +1,15 @@
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
 };
-foods.bananas = 13
-foods.grapes = 35
-foods.strawberries = 27
+userActivity.data.online = 45
 
 // Only change code below this line
 
 // Only change code above this line
 
-console.log(foods);
+console.log(userActivity);
