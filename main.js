@@ -6,11 +6,11 @@ let foods = {
   grapes: 35,
   strawberries: 27
 };
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+// Only change code below this line
 
-function checkInventory(scannedItem) {
-  // Only change code below this line
-return foods[scannedItem]
-  // Only change code above this line
-}
+// Only change code above this line
 
-console.log(checkInventory("apples"));
+console.log(foods);
