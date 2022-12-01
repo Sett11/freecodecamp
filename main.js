@@ -1,14 +1,62 @@
-let arr = [1,2,3,4,5,6,7,8,9]
-
-const f = (ar, n) => {
-  return ar[0]===n?true:
-  ar[1]===n?true:
-  ar[2]===n?true:
-  ar[3]===n?true:
-  ar[4]===n?true:
-  ar[5]===n?true:
-  ar[6]===n?true:
-  ar[7]===n?true:
-  ar[8]===n?true:false
+const tree = [
+  {
+      v: 5,
+      c: [
+          {
+              v: 5
+          },
+          {
+              v: 10,
+              c: [
+                  {
+                      v: 11,
+                  }
+              ]
+          },
+          {
+              v: 11,
+              c: [
+                  {
+                      v: 12,
+                      c: [
+                          {
+                              v: 5
+                          }
+                      ]
+                  }
+              ]
+          },
+      ]
+  },
+  {
+      v: 5,
+      c: [
+          {
+              v: 7
+          },
+          {
+              v: 12,
+              c: [
+                  {
+                      v: 11,
+                  }
+              ]
+          },
+          {
+              v: 14,
+          },
+      ]
+  }
+]
+const f = (tr) => {
+  let sum = 0
+  tr.map(el=>{
+    sum += el.v
+    if(!el.c){
+      return el.v
+    }
+    sum += f(el.c)
+  })
+  return sum
 }
-console.log(f(arr, 7))
+console.log(f(tree))
