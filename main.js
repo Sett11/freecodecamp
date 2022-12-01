@@ -1,3 +1,4 @@
-let text = "<h1>Winter is coming</h1>";
-let myRegex = /<.*?>/; // Change this line
-let result = text.match(myRegex);
+function f(s){
+  return s.match(/[.*C+.*]/g).join('')
+}
+console.log(f('CC'))
