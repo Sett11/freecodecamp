@@ -1,9 +1,11 @@
-function repeatStringNumTimes(str, num) {
-  let arr = []
-  for(let i = 0; i < num; i++){
-    arr.push(str)
+function findElement(arr, func) {
+  let result = undefined
+  for(let i = 0; i < arr.length; i++){
+    if(func(arr[i])){
+      return result = arr[i]
+    }
   }
-  return arr.join('')
+  return result
 }
 
-console.log(repeatStringNumTimes("abc", 3))
+console.log(findElement([1, 3, 5, 8, 9, 10], num => num % 2 === 0))
