@@ -1,3 +1,3 @@
-let myString = "freeCodeCamp";
-let fccRegex = /freeCodeCamp/i; // Change this line
-let result = fccRegex.test(myString);
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result = extractStr.match(codingRegex); // Change this line
