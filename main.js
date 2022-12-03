@@ -1,5 +1,5 @@
-function splitify(str) {
-  return str.split(/\W/g)
-  }
-  
-  console.log(splitify("Hello World,I-am code"))
+function sentensify(str) {
+    return str.split(/\W/g).join(' ')
+}
+
+console.log(sentensify("The.force.is.strong.with.this.one"))
