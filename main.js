@@ -1,8 +1,3 @@
-function checkPositive(arr) {
-    // Only change code below this line
-  return arr.some(val=>val>0)
+ const add = (x) => (y) => (z) => x+y+z
   
-    // Only change code above this line
-  }
-  
-  checkPositive([1, 2, 3, -4, 5]);
+  console.log(add(10)(20)(30))
