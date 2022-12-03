@@ -1,5 +1,6 @@
-function sentensify(str) {
-    return str.split(/\W/g).join(' ')
+
+function urlSlug(title) {
+    return title.trim().split(/\s+/g).join('-').toLowerCase()
 }
 
-console.log(sentensify("The.force.is.strong.with.this.one"))
+console.log(urlSlug(" Winter Is  Coming"))
