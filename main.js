@@ -1,20 +1,6 @@
-function sumAll(arr) {
-    let i = arr[0]
-    let j = arr[1]
-    let newArr = []
-    if(i>j){
-        while(j<=i){
-            newArr.push(j)
-            j++
-        }
-    }
-    else{
-        while(i<=j){
-            newArr.push(i)
-            i++
-        }
-    }
-    return newArr.reduce((acc, cur)=>acc+cur)
+function diffArray(arr1, arr2) {
+    let newArr = arr1.concat(arr2)
+    return newArr.filter((el) => arr1.indexOf(el) === -1 || arr2.indexOf(el) === -1)
   }
   
-  console.log(sumAll([5,10]))
+  console.log(diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]))
