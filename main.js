@@ -1,10 +1,2 @@
-function destroyer(arr) {
-    let newArr = []
-    for(let i = 0; i < arguments.length; i++){
-        newArr[i] = arguments[i]
-    }
-     let nextMyArr = newArr.shift()
-    return nextMyArr.filter(el => newArr.indexOf(el) === -1)
-  }
-  
-  console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5))
+const f = x => y => z => x+y+z
+  console.log(f(10)(20)(30))
