@@ -1,5 +1,5 @@
-function palindrome(str) {
-    return  str.toLowerCase().replace(/[\W_]/g, '') === str.toLowerCase().replace(/[\W_]/g, '').split('').reverse().join('')? true: false
+function spinalCase(str) {
+    return str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[\s_]/g, '-').toLowerCase()
   }
   
-  console.log(palindrome("0_0 (: /-\ :) 0-0"))
+  console.log(spinalCase("The_Andy_Griffith_Show"))
