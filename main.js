@@ -1,16 +1,9 @@
-function steamrollArray(arr) {
-  let res = [];
-  function f(arr) {
-    arr.forEach((el) => {
-      if (!Array.isArray(el)) {
-        res.push(el);
-      } else {
-        f(el);
-      }
-    });
+function truthCheck(collection, pre) {
+    let arr = []
+    for(let s of collection){
+        arr.push(s[pre])
+    }
+    return arr.every(el => !!el !== false)
   }
-  f(arr)
-  return res;
-}
-
-console.log(steamrollArray([1, [2], [3, [[4]]]]));
+  
+  console.log(truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}], "number"))
