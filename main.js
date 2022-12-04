@@ -1,24 +1,11 @@
-function sumPrimes(num) {
-  let arr = [false, false]
-  
-  for(let i = 2; i <= num; i++){
-    arr[i] = true
+function binaryAgent(str) {
+  let arr = str.split(' ')
+  let newArr = []
+
+  for(let i = 0; i < arr.length; i++){
+    newArr.push(String.fromCharCode(parseInt(arr[i], 2)))
   }
-    let lim = Math.sqrt(num)
-    for(let j = 2; j < num; j++){
-      if(arr[j] === true){
-        for(let k = j * j; k <= num; k += j){
-          arr[k] = false
-        }
-      }
-    }
-  return arr.reduce((acc, cur, i) => {
-    if( cur === true){
-      return acc + i
-    } else{
-      return acc
-    }
-  })
+  return newArr.join('')
 }
 
-console.log(sumPrimes(10))
+console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"))
