@@ -1,14 +1,16 @@
-function sumFibs(num) {
-    if(num === 1){
-        return num
-    }
-    let arr = [1, 1]
-    for(let i = 2; i < num; i++){
-        arr[i] = arr[i-1] + arr[i-2]
-    }
-    return arr.slice(0, num)
-    .filter(el => el<=num && el%2!==0)
-    .reduce((acc, cur) => acc + cur)
+function steamrollArray(arr) {
+  let res = [];
+  function f(arr) {
+    arr.forEach((el) => {
+      if (!Array.isArray(el)) {
+        res.push(el);
+      } else {
+        f(el);
+      }
+    });
   }
-  
-  console.log(sumFibs(4))
+  f(arr)
+  return res;
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
