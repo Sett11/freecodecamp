@@ -1,4 +1,4 @@
-{ "author" : "Jhonny",
+{ "author": "Jhonny",
   "dependencies": {
     "fcc-learn-npm-package-json": "github:Sett11/boilerplate-npm"
   }
