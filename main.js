@@ -1,20 +1,5 @@
-function whatIsInAName(collection, source) {
-    let arr = []
-    arr = collection.filter(obj => {
-        let soKeys = Object.keys(source)
-        for(let i = 0; i < soKeys.length; i++){
-            if(obj.hasOwnProperty(soKeys[i])){
-                if(obj[soKeys[i]] != source[soKeys[i]]){
-                    return false
-                }
-            }
-            else{
-                return false
-            }
-        }
-        return true
-    })
-    return arr
-}
-
-console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }))
+function palindrome(str) {
+    return  str.toLowerCase().replace(/[\W_]/g, '') === str.toLowerCase().replace(/[\W_]/g, '').split('').reverse().join('')? true: false
+  }
+  
+  console.log(palindrome("0_0 (: /-\ :) 0-0"))
