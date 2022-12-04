@@ -1,0 +1,5 @@
+{ "autor" : "Jhonny",
+  "dependencies": {
+    "fcc-learn-npm-package-json": "github:Sett11/boilerplate-npm"
+  }
+}
